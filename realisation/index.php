@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"]== 'GET'){
 <body>
 <header>    
     <form action="index.php" method="GET" class="filter-form">
-        <input type="text" name="search" placeholder="search recipes....." value="<?php echo $_GET['search'] ?? ''; ?>">
+        <input type="text" name="search" placeholder="search recipes.....">
         
         <select name="filter">
             <option value="">All category</option>
@@ -55,7 +55,7 @@ if($_SERVER["REQUEST_METHOD"]== 'GET'){
                 <img src="<?php echo $recipe['image']; ?>" alt="cake">
                     </div>
                     <div class="card-content">
-                        <span class="category-badge"><?php echo htmlspecialchars($recipe['category']); ?></span>
+                        <span class="category-badge"><?php echo $recipe['category']; ?></span>
                         <h3><?php echo ($recipe['name']); ?></h3>
                         <p class="time">⏱️ <?php echo $recipe['prep_time']; ?> min</p>
                     </div>
